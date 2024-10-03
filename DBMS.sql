@@ -1,0 +1,24 @@
+CREATE DATABASE MYB;
+USE MYB;
+CREATE TABLE Student
+(Roll INT PRIMARY KEY, NAME VARCHAR(50),Marks DOUBLE);
+
+
+INSERT INTO Student
+(Roll,Name,Marks) VALUES(1,'Sazid',80.00);
+
+INSERT INTO Student
+(Roll,Name) VALUES(2,'Hasen');
+
+INSERT INTO Student
+(Roll ,Name,Marks) VALUES(3,'Fakhar Zaman',90);
+
+SET SQL_SAFE_UPDATES=0;
+UPDATE Student
+SET Name='AMI'
+WHERE Roll =1;
+SET SQL_SAFE_UPDATES=1;
+
+SET SQL_SAFE_UPDATES=0;
+DELETE FROM Student
+WHERE Roll=1;
